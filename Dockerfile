@@ -45,3 +45,6 @@ RUN pip install molecule
 
 # Install docker python for the Molecule docker driver
 RUN pip install docker
+
+# ENV to prevent python from writing binary files into mounted workspace
+ENV PYTHONDONTWRITEBYTECODE 1
