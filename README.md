@@ -43,8 +43,8 @@ An example git layout is below:
 ### Docker drivers
 
 ```console
-# docker run -v /run/docker.sock:/run/docker.sock -v `pwd`:/ansible-backup ciscosecuritytrustops/ansible_molecule
-# cd /ansible-backup
+# export ROLE_NAME=<your role>
+# docker run -it -v /run/docker.sock:/run/docker.sock -v `pwd`:/${ROLE_NAME} -w /${ROLE_NAME}  ciscosecuritytrustops/ansible-molecule
 # molecule test
 ```
 
